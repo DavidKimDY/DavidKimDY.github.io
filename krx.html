@@ -140,8 +140,108 @@
               
               <div>
                 
-  <div class="section" id="module-coredotfinance">
-<span id="krx"></span><h1>KRX<a class="headerlink" href="#module-coredotfinance" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="module-coredotfinance.krx">
+<span id="krx"></span><h1>KRX<a class="headerlink" href="#module-coredotfinance.krx" title="Permalink to this headline">¶</a></h1>
+<dl class="py function">
+<dt id="coredotfinance.krx.get">
+<code class="sig-prename descclassname"><span class="pre">coredotfinance.krx.</span></code><code class="sig-name descname"><span class="pre">get</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">stock</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'all'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#coredotfinance.krx.get" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>stock</strong> (<em>str</em>) -- 종목명 또는 종목코드를 입력. default 값은 &quot;all&quot;이며 전종목 시세를 반환한다.</p></li>
+<li><p><strong>start</strong> (<em>int</em><em>, </em><em>str</em>) -- 검색 시작일, default 값은 오늘로부터 60일 이전</p></li>
+<li><p><strong>end</strong> (<em>int</em><em>, </em><em>str</em>) -- 검색 종료일, default 값은 오늘</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>Stock prices data in Kospi, Kosdaq, Konex</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>DataFrame</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="coredotfinance.krx.per">
+<code class="sig-prename descclassname"><span class="pre">coredotfinance.krx.</span></code><code class="sig-name descname"><span class="pre">per</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">stock</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'all'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#coredotfinance.krx.per" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>stock</strong> (<em>str</em>) -- 종목명 또는 종목코드를 입력. default 값은 &quot;all&quot;이며 전종목 시세를 반환한다.</p></li>
+<li><p><strong>start</strong> (<em>int</em><em>, </em><em>str</em>) -- 검색 시작일, default 값은 오늘로부터 60일 이전</p></li>
+<li><p><strong>end</strong> (<em>int</em><em>, </em><em>str</em>) -- 검색 종료일, default 값은 오늘</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>PER, EPS, PBS, BPS, 주당배당금, 배당수익률 data in Kospi, Kosdaq, Konex</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>DataFrame</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="coredotfinance.krx.etf">
+<code class="sig-prename descclassname"><span class="pre">coredotfinance.krx.</span></code><code class="sig-name descname"><span class="pre">etf</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">item</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'all'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#coredotfinance.krx.etf" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>item</strong> (<em>str</em>) -- ETF 종목명 또는 ETF 종목코드를 입력. default 값은 &quot;all&quot;이며 전종목 시세를 반환한다.</p></li>
+<li><p><strong>start</strong> (<em>int</em><em>, </em><em>str</em>) -- 검색 시작일, default 값은 오늘로부터 60일 이전</p></li>
+<li><p><strong>end</strong> (<em>int</em><em>, </em><em>str</em>) -- 검색 종료일, default 값은 오늘</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>ETF data</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>DataFrame</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="coredotfinance.krx.elw">
+<code class="sig-prename descclassname"><span class="pre">coredotfinance.krx.</span></code><code class="sig-name descname"><span class="pre">elw</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">item</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'all'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#coredotfinance.krx.elw" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>item</strong> (<em>str</em>) -- ELW 종목명 또는 ELW 종목코드를 입력. default 값은 &quot;all&quot;이며 전종목 시세를 반환한다.</p></li>
+<li><p><strong>start</strong> (<em>int</em><em>, </em><em>str</em>) -- 검색 시작일, default 값은 오늘로부터 60일 이전</p></li>
+<li><p><strong>end</strong> (<em>int</em><em>, </em><em>str</em>) -- 검색 종료일, default 값은 오늘</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>ELW data</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>DataFrame</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="coredotfinance.krx.etn">
+<code class="sig-prename descclassname"><span class="pre">coredotfinance.krx.</span></code><code class="sig-name descname"><span class="pre">etn</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">item</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'all'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#coredotfinance.krx.etn" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>item</strong> (<em>str</em>) -- ETN 종목명 또는 ETN 종목코드를 입력. default 값은 &quot;all&quot;이며 전종목 시세를 반환한다.</p></li>
+<li><p><strong>start</strong> (<em>int</em><em>, </em><em>str</em>) -- 검색 시작일, default 값은 오늘로부터 60일 이전</p></li>
+<li><p><strong>end</strong> (<em>int</em><em>, </em><em>str</em>) -- 검색 종료일, default 값은 오늘</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>ETN data</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>DataFrame</p>
+</dd>
+</dl>
+</dd></dl>
+
 </div>
 
 

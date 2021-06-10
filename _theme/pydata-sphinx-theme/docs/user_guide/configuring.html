@@ -1,0 +1,690 @@
+
+<!DOCTYPE html>
+
+<html lang="kr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Configuration &#8212; CoreDotFinance 0.0.1 documentation</title>
+    
+  <link href="../../../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+    <script src="../../../../_static/jquery.js"></script>
+    <script src="../../../../_static/underscore.js"></script>
+    <script src="../../../../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+
+<a class="navbar-brand" href="../../../../index.html">
+  <img src="../../../../_static/coredottoday.png" class="logo" alt="logo">
+</a>
+
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    
+    
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/DavidKimDY/finance" rel="noopener" target="_blank" title="GitHub">
+            <span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label>
+          </a>
+        </li>
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar"><form class="bd-search d-flex align-items-center" action="../../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <div class="bd-toc-item active">
+    <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="install.html">
+   Installation
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Configuration
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="sections.html">
+   Add/Remove items from theme sections
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="customizing.html">
+   Customizing the theme
+  </a>
+ </li>
+</ul>
+
+  </div>
+</nav>
+            </div>
+            
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+              
+              <div class="toc-item">
+                
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#configure-project-logo">
+   Configure project logo
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#configure-icon-links">
+   Configure icon links
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#adding-external-links-to-your-nav-bar">
+   Adding external links to your nav bar
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#adding-favicons">
+   Adding favicons
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#configure-the-sidebar">
+   Configure the sidebar
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#configure-the-navigation-depth-and-collapsing-of-the-sidebar">
+   Configure the navigation depth and collapsing of the sidebar
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#hiding-the-previous-and-next-buttons">
+   Hiding the previous and next buttons
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#add-an-edit-this-page-button">
+   Add an Edit this Page button
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#github">
+     GitHub
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#gitlab">
+     GitLab
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#bitbucket">
+     Bitbucket
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#custom-edit-url">
+     Custom Edit URL
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#configure-the-search-bar-position">
+   Configure the search bar position
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#configure-the-search-bar-text">
+   Configure the search bar text
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#google-analytics">
+   Google Analytics
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#changing-pages-with-keyboard-presses">
+   Changing pages with keyboard presses
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#show-more-levels-of-the-in-page-toc-by-default">
+   Show more levels of the in-page TOC by default
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#remove-the-sidebar-from-some-pages">
+   Remove the sidebar from some pages
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#configure-the-navbar-center-alignment">
+   Configure the navbar center alignment
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#adding-ethical-advertisements-to-your-sidebar-in-readthedocs">
+   Adding ethical advertisements to your sidebar in ReadTheDocs
+  </a>
+ </li>
+</ul>
+
+</nav>
+              </div>
+              
+              <div class="toc-item">
+                
+              </div>
+              
+            
+          </div>
+          
+
+          
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <div class="section" id="configuration">
+<span id="id1"></span><h1>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h1>
+<p>There are a number of options for configuring your site's look and feel.
+All configuration options are passed with the <code class="docutils literal notranslate"><span class="pre">html_theme_options</span></code> variable
+in your <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> file. This is a dictionary with <code class="docutils literal notranslate"><span class="pre">key:</span> <span class="pre">val</span></code> pairs that
+you can configure in various ways. This page describes the options available to you.</p>
+<div class="section" id="configure-project-logo">
+<h2>Configure project logo<a class="headerlink" href="#configure-project-logo" title="Permalink to this headline">¶</a></h2>
+<p>To add a logo that's placed at the left of your nav bar, put a logo file under your
+doc path's _static folder, and use the following configuration:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">html_logo</span> <span class="o">=</span> <span class="s2">&quot;_static/logo.png&quot;</span>
+</pre></div>
+</div>
+<p>The logo links to <code class="docutils literal notranslate"><span class="pre">master_doc</span></code> (usually the first page of your documentation) by default.
+If you'd like it to link to another page or use an external link instead, use the following configuration:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">html_theme_options</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;logo_link&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;other page or external link&gt;&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="configure-icon-links">
+<span id="icon-links"></span><h2>Configure icon links<a class="headerlink" href="#configure-icon-links" title="Permalink to this headline">¶</a></h2>
+<p>If you'd like icon links to show up to the right of your main navigation bar, use the
+following configuration:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">html_theme_options</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="o">...</span>
+    <span class="s2">&quot;icon_links&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;GitHub&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/&lt;your-org&gt;/&lt;your-repo&gt;&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;icon&quot;</span><span class="p">:</span> <span class="s2">&quot;fab fa-github-square&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;GitLab&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://gitlab.com/&lt;your-org&gt;/&lt;your-repo&gt;&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;icon&quot;</span><span class="p">:</span> <span class="s2">&quot;fab fa-gitlab&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Twitter&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://twitter.com/&lt;your-handle&gt;&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;icon&quot;</span><span class="p">:</span> <span class="s2">&quot;fab fa-twitter-square&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">],</span>
+    <span class="o">...</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The value of <code class="docutils literal notranslate"><span class="pre">icon</span></code> can be any full
+<a class="reference external" href="https://fontawesome.com/icons?d=gallery&amp;m=free">FontAwesome 5 Free</a> icon.
+In addition to the main icon class, e.g. <code class="docutils literal notranslate"><span class="pre">fa-cat</span></code>, the &quot;style&quot; class must
+also be provided e.g. <cite>fab</cite> for <em>branding</em>, or <cite>fas</cite> for <em>solid</em>.</p>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>To get custom colors like &quot;Twitter blue&quot;, use the following in your CSS,
+e.g. <code class="docutils literal notranslate"><span class="pre">custom.css</span></code>:</p>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">i</span><span class="p">.</span><span class="nc">fa-twitter-square</span><span class="p">:</span><span class="nd">before</span> <span class="p">{</span>
+   <span class="k">color</span><span class="p">:</span> <span class="mh">#55acee</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>This has already been added for the brands that have <em>shortcuts</em>.</p>
+</div>
+<p>The below are shortcuts for commonly-used services, but may be removed in a future
+release in favor of <code class="docutils literal notranslate"><span class="pre">icon_links</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">html_theme_options</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="o">...</span>
+    <span class="s2">&quot;github_url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/&lt;your-org&gt;/&lt;your-repo&gt;&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;gitlab_url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://gitlab.com/&lt;your-org&gt;/&lt;your-repo&gt;&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;bitbucket_url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://bitbucket.org/&lt;your-org&gt;/&lt;your-repo&gt;&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;twitter_url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://twitter.com/&lt;your-handle&gt;&quot;</span><span class="p">,</span>
+    <span class="o">...</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Additionally, the screen-reader accessible label for this menu can be configured:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">html_theme_options</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="o">...</span>
+    <span class="s2">&quot;icon_links_label&quot;</span><span class="p">:</span> <span class="s2">&quot;Quick Links&quot;</span><span class="p">,</span>
+    <span class="o">...</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="adding-external-links-to-your-nav-bar">
+<h2>Adding external links to your nav bar<a class="headerlink" href="#adding-external-links-to-your-nav-bar" title="Permalink to this headline">¶</a></h2>
+<p>You can add external links to your navigation bar. These will show up to the right
+of your site's main links, and will have a small icon indicating that they point to
+an external site. You can add external links to the nav bar like so:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">html_theme_options</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="s2">&quot;external_links&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;link-one-name&quot;</span><span class="p">,</span> <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://&lt;link-one&gt;&quot;</span><span class="p">},</span>
+      <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;link-two-name&quot;</span><span class="p">,</span> <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://&lt;link-two&gt;&quot;</span><span class="p">}</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="adding-favicons">
+<h2>Adding favicons<a class="headerlink" href="#adding-favicons" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">pydata_sphinx_theme</span></code> supports the
+<a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-html_favicon">standard sphinx favicon configuration</a>,
+using <code class="docutils literal notranslate"><span class="pre">html_favicon</span></code>.</p>
+<p>Additionally, <code class="docutils literal notranslate"><span class="pre">pydata_sphinx_theme</span></code> allows you to add any number of
+browser- or device-specific favicons of any size. To define arbitrary favicons,
+use the <code class="docutils literal notranslate"><span class="pre">favicons</span></code> configuration key. The <code class="docutils literal notranslate"><span class="pre">href</span></code> value can be either an
+absolute URL (beginning with <code class="docutils literal notranslate"><span class="pre">http</span></code>) or a local path relative to your
+<code class="docutils literal notranslate"><span class="pre">html_static_path</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">html_theme_options</span> <span class="o">=</span> <span class="p">{</span>
+   <span class="s2">&quot;favicons&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+         <span class="s2">&quot;rel&quot;</span><span class="p">:</span> <span class="s2">&quot;icon&quot;</span><span class="p">,</span>
+         <span class="s2">&quot;sizes&quot;</span><span class="p">:</span> <span class="s2">&quot;16x16&quot;</span><span class="p">,</span>
+         <span class="s2">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://secure.example.com/favicon/favicon-16x16.png&quot;</span><span class="p">,</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+         <span class="s2">&quot;rel&quot;</span><span class="p">:</span> <span class="s2">&quot;icon&quot;</span><span class="p">,</span>
+         <span class="s2">&quot;sizes&quot;</span><span class="p">:</span> <span class="s2">&quot;32x32&quot;</span><span class="p">,</span>
+         <span class="s2">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;favicon-32x32.png&quot;</span><span class="p">,</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+         <span class="s2">&quot;rel&quot;</span><span class="p">:</span> <span class="s2">&quot;apple-touch-icon&quot;</span><span class="p">,</span>
+         <span class="s2">&quot;sizes&quot;</span><span class="p">:</span> <span class="s2">&quot;180x180&quot;</span><span class="p">,</span>
+         <span class="s2">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;apple-touch-icon-180x180.png&quot;</span>
+      <span class="p">},</span>
+   <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">pydata_sphinx_theme</span></code> will add <code class="docutils literal notranslate"><span class="pre">link</span></code> tags to your document's <code class="docutils literal notranslate"><span class="pre">head</span></code>
+section, following this pattern:</p>
+<div class="highlight-html+jinja notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;</span><span class="cp">{{</span> <span class="nv">favicon.rel</span> <span class="cp">}}</span><span class="s">&quot;</span> <span class="na">sizes</span><span class="o">=</span><span class="s">&quot;</span><span class="cp">{{</span> <span class="nv">favicon.sizes</span> <span class="cp">}}</span><span class="s">&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;</span><span class="cp">{{</span> <span class="nv">favicon.href</span> <span class="cp">}}</span><span class="s">&quot;</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="configure-the-sidebar">
+<span id="configure-sidebar"></span><h2>Configure the sidebar<a class="headerlink" href="#configure-the-sidebar" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">pydata_sphinx_theme</span></code> provides two new sidebar items by default:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">sidebar-nav-bs.html</span></code> - a bootstrap-friendly navigation section</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">search-field.html</span></code> - a bootstrap-friendly search bar</p></li>
+</ul>
+<p>By default, this theme's sidebar has these two elements in it. If you'd like to
+override this behavior and control the sidebar on a per-page basis, use the
+<a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/configuration.html?highlight=html_sidebars#confval-html_sidebars">Sphinx html-sidebars configuration value</a>.</p>
+</div>
+<div class="section" id="configure-the-navigation-depth-and-collapsing-of-the-sidebar">
+<h2>Configure the navigation depth and collapsing of the sidebar<a class="headerlink" href="#configure-the-navigation-depth-and-collapsing-of-the-sidebar" title="Permalink to this headline">¶</a></h2>
+<p>By default, this theme enables to expand/collapse subsections in the left
+sidebar navigation (without actually navigating to the page itself), and this extends
+up to 4 levels deep:</p>
+<img alt="_static/demo-expandable-navigation.gif" src="_static/demo-expandable-navigation.gif" />
+<p>When having a site with many files and/or many levels, this can cause a long
+build time and larger HTML file sizes. Therefore, it is possible to turn off
+the expandable navigation by setting the <cite>collapse_navigation</cite> config option
+to True:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">html_theme_options</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="s2">&quot;collapse_navigation&quot;</span><span class="p">:</span> <span class="kc">True</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>In addition, you can also control how many levels of the navigation are shown
+in the sidebar (with a default of 4):</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">html_theme_options</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="s2">&quot;navigation_depth&quot;</span><span class="p">:</span> <span class="mi">2</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="hiding-the-previous-and-next-buttons">
+<h2>Hiding the previous and next buttons<a class="headerlink" href="#hiding-the-previous-and-next-buttons" title="Permalink to this headline">¶</a></h2>
+<p>By default, each page of your site will have &quot;previous&quot; and &quot;next&quot; buttons
+at the bottom. You can hide these buttons with the following configuration:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">html_theme_options</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="s2">&quot;show_prev_next&quot;</span><span class="p">:</span> <span class="kc">False</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="add-an-edit-this-page-button">
+<h2>Add an Edit this Page button<a class="headerlink" href="#add-an-edit-this-page-button" title="Permalink to this headline">¶</a></h2>
+<p>You can add a button to each page that will allow users to edit the page text
+directly and submit a pull request to update the documentation. To include this
+button in the right sidebar of each page, add the following configuration to
+your <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> file in 'html_theme_options':</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">html_theme_options</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;use_edit_page_button&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>A number of providers are available for building <em>Edit this Page</em> links, including
+GitHub, GitLab, and Bitbucket. For each, the default public instance URL can be
+replaced with a self-hosted instance.</p>
+<div class="section" id="github">
+<h3>GitHub<a class="headerlink" href="#github" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">html_context</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="c1"># &quot;github_url&quot;: &quot;https://github.com&quot;, # or your GitHub Enterprise interprise</span>
+    <span class="s2">&quot;github_user&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;your-github-org&gt;&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;github_repo&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;your-github-repo&gt;&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;github_version&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;your-branch&gt;&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;doc_path&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;path-from-root-to-your-docs&gt;&quot;</span><span class="p">,</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="gitlab">
+<h3>GitLab<a class="headerlink" href="#gitlab" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">html_context</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="c1"># &quot;gitlab_url&quot;: &quot;https://gitlab.com&quot;, # or your self-hosted GitLab</span>
+    <span class="s2">&quot;gitlab_user&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;your-gitlab-org&gt;&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;gitlab_repo&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;your-gitlab-repo&gt;&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;gitlab_version&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;your-branch&gt;&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;doc_path&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;path-from-root-to-your-docs&gt;&quot;</span><span class="p">,</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="bitbucket">
+<h3>Bitbucket<a class="headerlink" href="#bitbucket" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">html_context</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="c1"># &quot;bitbucket_url&quot;: &quot;https://bitbucket.org&quot;, # or your self-hosted Bitbucket</span>
+    <span class="s2">&quot;bitbucket_user&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;your-bitbucket-org&gt;&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;bitbucket_repo&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;your-bitbucket-repo&gt;&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;bitbucket_version&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;your-branch&gt;&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;doc_path&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;path-from-root-to-your-docs&gt;&quot;</span><span class="p">,</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="custom-edit-url">
+<h3>Custom Edit URL<a class="headerlink" href="#custom-edit-url" title="Permalink to this headline">¶</a></h3>
+<p>For a fully-customized <em>Edit this Page</em> URL, provide <code class="docutils literal notranslate"><span class="pre">edit_page_url_template</span></code>,
+a jinja2 template string which must contain <code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">file_name</span> <span class="pre">}}</span></code>, and may reference
+any other context values.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">html_context</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;edit_page_url_template&quot;</span><span class="p">:</span> <span class="s2">&quot;{{ my_vcs_site }}{{ file_name }}{{ some_other_arg }}&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;my_vcs_site&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.com&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;some_other_arg&quot;</span><span class="p">:</span> <span class="s2">&quot;?some-other-arg&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="configure-the-search-bar-position">
+<h2>Configure the search bar position<a class="headerlink" href="#configure-the-search-bar-position" title="Permalink to this headline">¶</a></h2>
+<p>To modify the position of the search bar, add the <code class="docutils literal notranslate"><span class="pre">search-field.html</span></code>
+template to your <strong>sidebar</strong>, or to one of the <strong>navbar</strong> positions, depending
+on where you want it to be placed.</p>
+<p>For example, if you'd like the search field to be in your side-bar, add it to
+the sidebar templates like so:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">html_sidebars</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;**&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;search-field.html&quot;</span><span class="p">,</span> <span class="s2">&quot;sidebar-nav-bs.html&quot;</span><span class="p">,</span> <span class="s2">&quot;sidebar-ethical-ads.html&quot;</span><span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>If instead you'd like to put the search bar in the top navbar, use the
+following configuration:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">html_theme_options</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;navbar_end&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;navbar-icon-links.html&quot;</span><span class="p">,</span> <span class="s2">&quot;search-field.html&quot;</span><span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>By default the search bar is positioned in the sidebar since this is more
+suitable for large navigation bars.</p>
+</div>
+</div>
+<div class="section" id="configure-the-search-bar-text">
+<h2>Configure the search bar text<a class="headerlink" href="#configure-the-search-bar-text" title="Permalink to this headline">¶</a></h2>
+<p>To modify the text that is in the search bar before people click on it, add the
+following configuration to your <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> file:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">html_theme_options</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;search_bar_text&quot;</span><span class="p">:</span> <span class="s2">&quot;Your text here...&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="google-analytics">
+<h2>Google Analytics<a class="headerlink" href="#google-analytics" title="Permalink to this headline">¶</a></h2>
+<p>If the <code class="docutils literal notranslate"><span class="pre">google_analytics_id</span></code> config option is specified (like <code class="docutils literal notranslate"><span class="pre">UA-XXXXXXX</span></code>),
+Google Analytics' javascript is included in the html pages.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">html_theme_options</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;google_analytics_id&quot;</span><span class="p">:</span> <span class="s2">&quot;UA-XXXXXXX&quot;</span><span class="p">,</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="changing-pages-with-keyboard-presses">
+<h2>Changing pages with keyboard presses<a class="headerlink" href="#changing-pages-with-keyboard-presses" title="Permalink to this headline">¶</a></h2>
+<p>By default, <code class="docutils literal notranslate"><span class="pre">pydata-sphinx-theme</span></code> allows users to move to the previous/next
+page using the left/right arrow keys on a keyboard. To disable this behavior,
+use the following configuration:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">html_theme_options</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="s2">&quot;navigation_with_keys&quot;</span><span class="p">:</span> <span class="kc">False</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="show-more-levels-of-the-in-page-toc-by-default">
+<h2>Show more levels of the in-page TOC by default<a class="headerlink" href="#show-more-levels-of-the-in-page-toc-by-default" title="Permalink to this headline">¶</a></h2>
+<p>Normally only the 2nd-level headers of a page are show in the right
+table of contents, and deeper levels are only shown when they are part
+of an active section (when it is scrolled on screen).</p>
+<p>You can show deeper levels by default by using the following configuration, indicating how many levels should be displayed:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">html_theme_options</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="s2">&quot;show_toc_level&quot;</span><span class="p">:</span> <span class="mi">2</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>All headings up to and including the level specified will now be shown
+regardless of what is displayed on the page.</p>
+</div>
+<div class="section" id="remove-the-sidebar-from-some-pages">
+<h2>Remove the sidebar from some pages<a class="headerlink" href="#remove-the-sidebar-from-some-pages" title="Permalink to this headline">¶</a></h2>
+<p>If you'd like the left sidebar to be removed from a page, you can use the
+following configuration in <code class="docutils literal notranslate"><span class="pre">conf.py</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">html_sidebars</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="s2">&quot;pagename&quot;</span><span class="p">:</span> <span class="p">[]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>This works for glob-style patterns as well. For example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">html_sidebars</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="s2">&quot;folder/*&quot;</span><span class="p">:</span> <span class="p">[]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>If you'd like to remove the left sidebar from <strong>all</strong> pages of your documentation,
+use this pattern:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">html_sidebars</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="s2">&quot;**&quot;</span><span class="p">:</span> <span class="p">[]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>For information about configuring the sidebar's contents, see <a class="reference internal" href="#configure-sidebar"><span class="std std-ref">Configure the sidebar</span></a>.</p>
+</div>
+<div class="section" id="configure-the-navbar-center-alignment">
+<h2>Configure the navbar center alignment<a class="headerlink" href="#configure-the-navbar-center-alignment" title="Permalink to this headline">¶</a></h2>
+<p>By default, the navigation bar center area will align with the content on your
+page. This equals the following default configuration:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">html_theme_options</span> <span class="o">=</span> <span class="p">{</span>
+   <span class="o">...</span>
+   <span class="s2">&quot;navbar_align&quot;</span><span class="p">:</span> <span class="s2">&quot;content&quot;</span>
+   <span class="o">...</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>If instead you'd like these items to snap to the left (closer to the logo), use this
+configuration:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">html_theme_options</span> <span class="o">=</span> <span class="p">{</span>
+   <span class="o">...</span>
+   <span class="s2">&quot;navbar_align&quot;</span><span class="p">:</span> <span class="s2">&quot;left&quot;</span>
+   <span class="o">...</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>If you'd like these items to snap to the right of the page, use this configuration:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">html_theme_options</span> <span class="o">=</span> <span class="p">{</span>
+   <span class="o">...</span>
+   <span class="s2">&quot;navbar_align&quot;</span><span class="p">:</span> <span class="s2">&quot;right&quot;</span>
+   <span class="o">...</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="adding-ethical-advertisements-to-your-sidebar-in-readthedocs">
+<h2>Adding ethical advertisements to your sidebar in ReadTheDocs<a class="headerlink" href="#adding-ethical-advertisements-to-your-sidebar-in-readthedocs" title="Permalink to this headline">¶</a></h2>
+<p>If you're hosting your documentation on ReadTheDocs, you should consider
+adding an explicit placement for their <strong>ethical advertisements</strong>. These are
+non-tracking advertisements from ethical companies, and they help ReadTheDocs
+sustain themselves and their free service.</p>
+<p>Ethical advertisements are added to your sidebar by default. To ensure they are
+there if you manually update your sidebar, ensure that the <code class="docutils literal notranslate"><span class="pre">sidebar-ethical-ads.html</span></code>
+template is added to your list. For example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">html_sidebars</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;**&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;search-field.html&quot;</span><span class="p">,</span> <span class="s2">&quot;sidebar-nav-bs.html&quot;</span><span class="p">,</span> <span class="s2">&quot;sidebar-ethical-ads.html&quot;</span><span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+              </div>
+              
+              
+              <div class='prev-next-bottom'>
+                
+
+              </div>
+              
+          </main>
+          
+
+      </div>
+    </div>
+  
+  <script src="../../../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  <footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright 2021, Core.Today.<br/>
+</p>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.5.4.<br/>
+</p>
+    </div>
+    
+  </div>
+</footer>
+  </body>
+</html>

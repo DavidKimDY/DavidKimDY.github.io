@@ -1,0 +1,569 @@
+
+<!DOCTYPE html>
+
+<html lang="kr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contributing &#8212; CoreDotFinance 0.0.1 documentation</title>
+    
+  <link href="../../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+
+<a class="navbar-brand" href="../../../index.html">
+  <img src="../../../_static/coredottoday.png" class="logo" alt="logo">
+</a>
+
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    
+    
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/DavidKimDY/finance" rel="noopener" target="_blank" title="GitHub">
+            <span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label>
+          </a>
+        </li>
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar"><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <div class="bd-toc-item active">
+    
+  </div>
+</nav>
+            </div>
+            
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+              
+              <div class="toc-item">
+                
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#installing-python-dependencies">
+   Installing Python dependencies
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#installing-this-theme">
+   Installing this theme
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#building-the-demo-site">
+   Building the demo site
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#developing-the-theme-css-and-js">
+   Developing the theme CSS and JS
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#steps-to-develop-the-theme">
+     Steps to develop the theme
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#installing-yarn">
+       Installing
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         yarn
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#installing-js-dependencies">
+       Installing JS dependencies
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#running-the-development-server">
+       Running the development server
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#building-the-production-assets">
+       Building the production assets
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#install-the-test-infrastructure">
+       Install the test infrastructure
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#changing-fonts">
+     Changing fonts
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#upgrading-a-font">
+       Upgrading a font
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#changing-a-font">
+       Changing a font
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#contributing-changes">
+   Contributing changes
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ensuring-correct-commits">
+   Ensuring correct commits
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#make-a-release">
+   Make a release
+  </a>
+ </li>
+</ul>
+
+</nav>
+              </div>
+              
+              <div class="toc-item">
+                
+              </div>
+              
+            
+          </div>
+          
+
+          
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <div class="section" id="contributing">
+<h1>Contributing<a class="headerlink" href="#contributing" title="Permalink to this headline">¶</a></h1>
+<p>The documentation for this theme (what you are looking at now) also serves
+as a demo site for the theme.</p>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>The top-level <cite>Demo site</cite> section includes
+more pages with typical Sphinx content and structural elements.</p>
+</div>
+<div class="section" id="installing-python-dependencies">
+<h2>Installing Python dependencies<a class="headerlink" href="#installing-python-dependencies" title="Permalink to this headline">¶</a></h2>
+<p>To run the demo site, first install the Python dependencies, for example with <code class="docutils literal notranslate"><span class="pre">pip</span></code>
+or <code class="docutils literal notranslate"><span class="pre">conda</span></code>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># with pip</span>
+python -m pip install -r docs/requirements.txt
+<span class="c1"># or with conda</span>
+conda install -c conda-forge --file docs/requirements.txt
+</pre></div>
+</div>
+</div>
+<div class="section" id="installing-this-theme">
+<h2>Installing this theme<a class="headerlink" href="#installing-this-theme" title="Permalink to this headline">¶</a></h2>
+<p>Next, install this theme itself, a python package.
+When developing, it is recommended to install in &quot;development&quot; or &quot;editable&quot; mode,
+allowing changes in the repo to be directly tested with this documentation suite.</p>
+<p>To install the package, from the root of this repo, run:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python -m pip install --editable .
+</pre></div>
+</div>
+</div>
+<div class="section" id="building-the-demo-site">
+<h2>Building the demo site<a class="headerlink" href="#building-the-demo-site" title="Permalink to this headline">¶</a></h2>
+<p>For a traditional Sphinx build of the demo site, navigate to the <code class="docutils literal notranslate"><span class="pre">docs/</span></code> directory,
+and run:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>make html
+</pre></div>
+</div>
+<p>Sphinx will build the HTML version of the site in the <code class="docutils literal notranslate"><span class="pre">docs/_build/html</span></code> directory.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you wish to customize the CSS or JS beyond what is available in the
+<a class="reference internal" href="user_guide/configuring.html#configuration"><span class="std std-ref">Configuration</span></a> and <a class="reference internal" href="user_guide/customizing.html#customizing"><span class="std std-ref">Customizing the theme</span></a> sections of the user guide,
+extra steps are required. The next section covers the full workflow, from
+changing the source files, to seeing the updated site.</p>
+</div>
+</div>
+<div class="section" id="developing-the-theme-css-and-js">
+<h2>Developing the theme CSS and JS<a class="headerlink" href="#developing-the-theme-css-and-js" title="Permalink to this headline">¶</a></h2>
+<p>The CSS and JS for this theme are built for the browser from <code class="docutils literal notranslate"><span class="pre">src/*</span></code> with
+<a class="reference external" href="https://webpack.js.org/">webpack</a>. The main entrypoints are:</p>
+<ul class="simple">
+<li><p>CSS: <code class="docutils literal notranslate"><span class="pre">src/scss/index.scss</span></code></p>
+<ul>
+<li><p>the main part of the theme assets</p></li>
+<li><p>customizes <a class="reference external" href="https://getbootstrap.com/">Bootstrap</a> with <a class="reference external" href="https://sass-lang.com">Sass</a></p></li>
+<li><p>points to the <code class="docutils literal notranslate"><span class="pre">font-face</span></code> of vendored web fonts, but does not include their
+CSS <code class="docutils literal notranslate"><span class="pre">&#64;font-face</span></code> declaration</p></li>
+</ul>
+</li>
+<li><p>JS: <code class="docutils literal notranslate"><span class="pre">src/js/index.js</span></code></p>
+<ul>
+<li><p>provides add-on Bootstrap features, as well as some custom navigation behavior</p></li>
+</ul>
+</li>
+<li><p>webpack: <code class="docutils literal notranslate"><span class="pre">webpack.common.js</span></code></p>
+<ul>
+<li><p>captures the techniques for transforming the JS and CSS source files in
+<code class="docutils literal notranslate"><span class="pre">src/</span></code> into the production assets in <code class="docutils literal notranslate"><span class="pre">pydata_sphinx_theme/static/</span></code></p></li>
+</ul>
+</li>
+</ul>
+<p>These entrypoints, and all files they reference, are bundled into
+<code class="docutils literal notranslate"><span class="pre">pydata_sphinx_theme/static/{css,js}/index.&lt;hash&gt;.{css,js}</span></code>.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">&lt;hash&gt;</span></code> ensures the correct asset versions are served when viewers return to your
+site after upgrading the theme, and is reproducibly derived from <code class="docutils literal notranslate"><span class="pre">src/**/*</span></code>,
+<code class="docutils literal notranslate"><span class="pre">webpack.{common,prod}.js</span></code>, and the <code class="docutils literal notranslate"><span class="pre">dependencies</span></code> and <code class="docutils literal notranslate"><span class="pre">devDependencies</span></code>
+in <code class="docutils literal notranslate"><span class="pre">package.json</span></code>/<code class="docutils literal notranslate"><span class="pre">yarn.lock</span></code>.</p>
+<p>Web fonts, and their supporting CSS, are copied into
+<code class="docutils literal notranslate"><span class="pre">pydata_sphinx_theme/static/vendor/&lt;font</span> <span class="pre">name&gt;/&lt;font</span> <span class="pre">version&gt;/</span></code>. Including
+the <code class="docutils literal notranslate"><span class="pre">&lt;font</span> <span class="pre">version&gt;</span></code> also ensures the correct assets are served when upgrading.</p>
+<p>The links to these unique file names are captured as Jinja2 macros in
+<code class="docutils literal notranslate"><span class="pre">pydata_sphinx_theme/static/webpack-macros.html</span></code>.</p>
+<p>Finally, all of these files are committed to the repo, in-place, along with the
+rest of the code. This allows use of the theme directly from a <code class="docutils literal notranslate"><span class="pre">git</span></code> checkout,
+without any of the finicky web development dependencies, or even a <code class="docutils literal notranslate"><span class="pre">nodejs</span></code>
+runtime.</p>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>Theme development was inspired by the
+<a class="reference external" href="https://github.com/readthedocs/sphinx_rtd_theme">ReadTheDocs Sphinx theme</a>.</p>
+</div>
+<div class="section" id="steps-to-develop-the-theme">
+<h3>Steps to develop the theme<a class="headerlink" href="#steps-to-develop-the-theme" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple">
+<li><p>Install <code class="docutils literal notranslate"><span class="pre">yarn</span></code></p></li>
+<li><p>Install theme dependencies</p></li>
+<li><p>Run development server</p></li>
+<li><p>Build production assets</p></li>
+<li><p>Install the testing infrastructure</p></li>
+</ol>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>In order to commit changes to the theme, ensure you run
+<code class="docutils literal notranslate"><span class="pre">yarn</span> <span class="pre">build:production</span></code> so all built assets will be bundled, copied, or
+generated into <code class="docutils literal notranslate"><span class="pre">pydata_sphinx_theme/static/</span></code>.</p>
+</div>
+<div class="section" id="installing-yarn">
+<h4>Installing <code class="docutils literal notranslate"><span class="pre">yarn</span></code><a class="headerlink" href="#installing-yarn" title="Permalink to this headline">¶</a></h4>
+<p><a class="reference external" href="https://yarnpkg.com">Yarn</a> is a package manager for JS and CSS dependencies.
+Yarn itself can be installed with a number of
+<a class="reference external" href="https://classic.yarnpkg.com/en/docs/install">package managers</a>, including
+<code class="docutils literal notranslate"><span class="pre">conda</span></code>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda install -c conda-forge yarn
+</pre></div>
+</div>
+</div>
+<div class="section" id="installing-js-dependencies">
+<h4>Installing JS dependencies<a class="headerlink" href="#installing-js-dependencies" title="Permalink to this headline">¶</a></h4>
+<p>To install theme-related <code class="docutils literal notranslate"><span class="pre">dependencies</span></code> and <code class="docutils literal notranslate"><span class="pre">devDependencies</span></code> from <code class="docutils literal notranslate"><span class="pre">package.json</span></code>,
+from the root of this repo, run:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>yarn
+</pre></div>
+</div>
+<p>After adding/updating dependencies with <code class="docutils literal notranslate"><span class="pre">yarn</span> <span class="pre">add</span></code>, or manually changing <code class="docutils literal notranslate"><span class="pre">package.json</span></code>
+and re-running <code class="docutils literal notranslate"><span class="pre">yarn</span></code>, the <code class="docutils literal notranslate"><span class="pre">yarn.lock</span></code> and <code class="docutils literal notranslate"><span class="pre">package.json</span></code> files will likely change.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>If changed, commit <code class="docutils literal notranslate"><span class="pre">package.json</span></code> and <code class="docutils literal notranslate"><span class="pre">yarn.lock</span></code> together to ensure
+reproducible builds.</p>
+</div>
+</div>
+<div class="section" id="running-the-development-server">
+<h4>Running the development server<a class="headerlink" href="#running-the-development-server" title="Permalink to this headline">¶</a></h4>
+<p>To preview the frontend assets, from the root of this repo, run:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>yarn build:dev
+</pre></div>
+</div>
+<p>This launches a development server at <a class="reference external" href="http://localhost:1919">http://localhost:1919</a>. When working
+on the theme, saving changes to any of:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">src/js/index.js</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">src/scss/index.scss</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">docs/**/*.rst</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">docs/**/*.py</span></code></p></li>
+</ul>
+<p>...causes the development server to reload:</p>
+<ul class="simple">
+<li><p>bundle/copy the CSS, JS, and vendored fonts</p></li>
+<li><p>regenerate the Jinja2 macros</p></li>
+<li><p>re-run Sphinx</p></li>
+</ul>
+</div>
+<div class="section" id="building-the-production-assets">
+<h4>Building the production assets<a class="headerlink" href="#building-the-production-assets" title="Permalink to this headline">¶</a></h4>
+<p>To build the new theme assets into the python package, from the root of this repo,
+run:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>yarn build:production
+</pre></div>
+</div>
+</div>
+<div class="section" id="install-the-test-infrastructure">
+<h4>Install the test infrastructure<a class="headerlink" href="#install-the-test-infrastructure" title="Permalink to this headline">¶</a></h4>
+<p>This theme uses <code class="docutils literal notranslate"><span class="pre">pytest</span></code> for its testing, with a lightweight fixture defined
+in the <code class="docutils literal notranslate"><span class="pre">test_build.py</span></code> script that makes it easy to run a Sphinx build using
+this theme and inspect the results.</p>
+<p>In addition, we use <a class="reference external" href="https://pytest-regressions.readthedocs.io/en/latest/">pytest-regressions</a>
+to ensure that the HTML generated by the theme is what we'd expect. This module
+provides a <code class="docutils literal notranslate"><span class="pre">file_regression</span></code> fixture that will check the contents of an object
+against a reference file on disk. If the structure of the two differs, then the
+test will fail. If we <em>expect</em> the structure to differ, then delete the file on
+disk and run the test. A new file will be created, and subsequent tests will pass.</p>
+<p>Install the testing dependencies with:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install pytest pytest-regressions
+</pre></div>
+</div>
+<p>Then run the tests by calling <code class="docutils literal notranslate"><span class="pre">pytest</span></code> from the repository root.</p>
+</div>
+</div>
+<div class="section" id="changing-fonts">
+<h3>Changing fonts<a class="headerlink" href="#changing-fonts" title="Permalink to this headline">¶</a></h3>
+<p>Three &quot;styles&quot; of the <a class="reference external" href="https://fontawesome.com/icons?m=free">FontAwesome 5 Free</a>
+icon font are used for <a class="reference internal" href="user_guide/configuring.html#icon-links"><span class="std std-ref">icon links</span></a> and admonitions, and is
+the only <cite>vendored</cite> font. Further font choices are described in the <a class="reference internal" href="user_guide/customizing.html#customizing"><span class="std std-ref">Customizing the theme</span></a>
+section of the user guide, and require some knowledge of HTML and CSS.</p>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>Previously-included fonts like <cite>Lato</cite> have been removed, preferring
+the most common default system fonts of the reader's computer. This provides
+both better performance, and better script/glyph coverage than custom fonts,
+and is recommended in most cases.</p>
+</div>
+<p>The remaining vendored font selection is:</p>
+<ul class="simple">
+<li><p>managed as a dependency in <code class="docutils literal notranslate"><span class="pre">package.json</span></code></p>
+<ul>
+<li><p>allowing the version to be managed centrally</p></li>
+</ul>
+</li>
+<li><p>copied directly into the site statics, including licenses</p>
+<ul>
+<li><p>allowing the chosen font to be replaced (or removed entirely) with minimal
+templating changes: practically, changing the icon font is difficult at this
+point.</p></li>
+</ul>
+</li>
+<li><p>partially preloaded</p>
+<ul>
+<li><p>reducing flicker and re-layout artifacts of early icon renders</p></li>
+</ul>
+</li>
+<li><p>mostly managed in <code class="docutils literal notranslate"><span class="pre">webpack.common.js</span></code></p>
+<ul>
+<li><p>allowing upgrades to be handled in a relatively sane, manageable way, to
+ensure the most recent icons</p></li>
+</ul>
+</li>
+</ul>
+<div class="section" id="upgrading-a-font">
+<h4>Upgrading a font<a class="headerlink" href="#upgrading-a-font" title="Permalink to this headline">¶</a></h4>
+<p>If <em>only</em> the version of the <cite>existing</cite> font must change, for example to enable
+new icons, run:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>yarn add &lt;font name&gt;@&lt;version&gt;
+yarn build:production
+</pre></div>
+</div>
+<p>It <em>may</em> also be necessary to clear out old font versions from
+<code class="docutils literal notranslate"><span class="pre">pydata_sphinx_theme/static/vendor/</span></code> before committing.</p>
+</div>
+<div class="section" id="changing-a-font">
+<h4>Changing a font<a class="headerlink" href="#changing-a-font" title="Permalink to this headline">¶</a></h4>
+<p>If the above doesn't work, for example if file names for an existing font change,
+or a new font variant altogether is being added, hand-editing of <code class="docutils literal notranslate"><span class="pre">webpack.common.js</span></code>
+is required. The steps are roughly:</p>
+<ul class="simple">
+<li><p>install the new font, as above, with <code class="docutils literal notranslate"><span class="pre">yarn</span> <span class="pre">add</span></code></p></li>
+<li><p>in <code class="docutils literal notranslate"><span class="pre">webpack.common.js</span></code>:</p>
+<ul>
+<li><p>add the new font to <code class="docutils literal notranslate"><span class="pre">vendorVersions</span></code> and <code class="docutils literal notranslate"><span class="pre">vendorPaths</span></code></p></li>
+<li><p>add new <code class="docutils literal notranslate"><span class="pre">link</span></code> tags to the appropriate macro in <code class="docutils literal notranslate"><span class="pre">macroTemplate</span></code></p></li>
+<li><p>add the new font files (including the license) to <code class="docutils literal notranslate"><span class="pre">CopyPlugin</span></code></p></li>
+<li><p>remove references to the font being replaced/removed, if applicable</p></li>
+</ul>
+</li>
+<li><p>restart the development server, if running</p></li>
+<li><p>rebuild the production assets, as above, with <code class="docutils literal notranslate"><span class="pre">yarn</span> <span class="pre">build:production</span></code></p></li>
+<li><p>potentially remove the font being replaced from <code class="docutils literal notranslate"><span class="pre">package.json</span></code> and re-run <code class="docutils literal notranslate"><span class="pre">yarn</span></code></p></li>
+<li><p>commit all of the changed files</p></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="section" id="contributing-changes">
+<h2>Contributing changes<a class="headerlink" href="#contributing-changes" title="Permalink to this headline">¶</a></h2>
+<p>We follow a <a class="reference external" href="https://guides.github.com/introduction/flow/">typical GitHub workflow</a>
+of:</p>
+<ul class="simple">
+<li><p>create a personal fork of this repo</p></li>
+<li><p>create a branch</p></li>
+<li><p>open a pull request</p></li>
+<li><p>fix findings of various linters and checks</p></li>
+<li><p>work through code review</p></li>
+</ul>
+<p>For each pull request, the demo site is built and deployed to make it easier to review
+the changes in the PR. To access this, click on &quot;Details&quot; of the &quot;build_docs artifact&quot;
+job of Circle CI:</p>
+<img alt="../../../_images/pull-request-preview-link.png" src="../../../_images/pull-request-preview-link.png" />
+</div>
+<div class="section" id="ensuring-correct-commits">
+<h2>Ensuring correct commits<a class="headerlink" href="#ensuring-correct-commits" title="Permalink to this headline">¶</a></h2>
+<p>To ensure all source files have been correctly built, a <a class="reference external" href="https://pre-commit.com/">pre-commit</a>
+hook is available.</p>
+<p>To set this up, first install the <code class="docutils literal notranslate"><span class="pre">pre-commit</span></code> package:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># with pip</span>
+pip install pre-commit
+<span class="c1"># or with conda</span>
+conda install -c conda-forge pre-commit
+</pre></div>
+</div>
+<p>Then, from the root of this repo, run:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pre-commit install
+</pre></div>
+</div>
+<p>Now all of the checks will be run each time you commit changes.</p>
+<p>Note that if needed, you can skip these checks with:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git commit --no-verify
+</pre></div>
+</div>
+</div>
+<div class="section" id="make-a-release">
+<h2>Make a release<a class="headerlink" href="#make-a-release" title="Permalink to this headline">¶</a></h2>
+<p>This theme uses GitHub tags and releases to automatically push new releases to
+PyPI. For information on this process, see <a class="reference external" href="https://github.com/pydata/pydata-sphinx-theme/wiki/Release-checklist#release-instructions">the release checklist</a>.</p>
+</div>
+</div>
+
+
+              </div>
+              
+              
+              <div class='prev-next-bottom'>
+                
+
+              </div>
+              
+          </main>
+          
+
+      </div>
+    </div>
+  
+  <script src="../../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  <footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright 2021, Core.Today.<br/>
+</p>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.5.4.<br/>
+</p>
+    </div>
+    
+  </div>
+</footer>
+  </body>
+</html>

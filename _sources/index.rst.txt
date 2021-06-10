@@ -17,7 +17,7 @@ programming language.
    :card: + intro-card text-center
 
    ---
-   :img-top: _static/stock.jpg
+   :img-top: _static/krx.png
 
    **KRX**
 
@@ -33,7 +33,7 @@ programming language.
             :classes: bot-block btn-outline-primary
 
    ---
-   :img-top: _static/bitcoin.png
+   :img-top: _static/binance.jpg
 
    **Crypto Currency**
 
